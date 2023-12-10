@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>My Weather App</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+            id="search-form-input"
+          />
+          <input type="submit" value="Search" class="seach-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city"></h1>
+
+            <p class="weather-app-details">
+              <span id="time"></span>, <span id="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container"> 
+<div id="icon">
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" class="weather-app-icon">
+</div>
+            <div class="weather-app-temperature" id="temperature"></div>
+             <div class="weather-app-unit">⁰C</div>
+        </div>
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/OlessyaOG" target="_blank">
+          Olessya Oporta</a
+        >
+        on
+        <a href="https://github.com/OlessyaOG/my-weather-app" target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a href="https://hot-not-hot.netlify.app/" target="_blank">Netlify</a>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
