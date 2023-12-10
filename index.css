@@ -92,8 +92,10 @@ main {
 }
 
 .weather-forecast {
+  display: inline-flex;
   margin: 20px;
   color: black;
+  text-align: center;
 }
 
 .weather-forecast-date {
@@ -102,7 +104,14 @@ main {
 
 .weather-forecast-temperature-min {
   opacity: 0.6;
+  display: inline-block;
 }
+
+.weather-forecast-temperature-max {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .weather-forecast-temperatures {
   font-size: 13px;
 }

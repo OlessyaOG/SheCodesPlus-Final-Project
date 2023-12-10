@@ -67,7 +67,38 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+// Building the forecast function (jss only)
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast">
+<div class="row">
+    <divn class="col-2">
+        <div class="weather-forecast-date">
+        ${day}
+        </div>
+        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" alt="" width="42"
+        />
+        <div class="weather-forecast-temperatures">
+                  <div class="weather-forecast-temperature-max">18⁰C</div>  
+                  <div class="weather-forecast-temperature-min">12⁰C</div>
+            </div>
+    </div>
+</div>
+</div>`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Tokyo");
+displayForecast();
