@@ -90,6 +90,23 @@ main {
 .weather-app-details strong {
   color: #f65282;
 }
+
+.weather-forecast {
+  margin: 20px;
+  color: black;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
 footer {
   border-top: 2 px solid #f9f7fe;
   padding: 30px 0 0 0;

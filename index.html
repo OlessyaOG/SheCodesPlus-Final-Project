@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="index.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
-    <title>My Weather App</title>
+    <title>My Weather Forecast App</title>
   </head>
   <body>
     <div class="weather-app">
@@ -36,7 +36,7 @@
             <p class="weather-app-details">
               <span id="time"></span>, <span id="description"></span>
               <br />
-              Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+              Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind"></strong>
             </p>
           </div>
           <div class="weather-app-temperature-container"> 
@@ -45,16 +45,38 @@
 </div>
             <div class="weather-app-temperature" id="temperature"></div>
              <div class="weather-app-unit">⁰C</div>
-        </div>
-      </main>
 
+
+             
+        </div>
+        
+        <br />
+
+
+
+      </main>
+<div class="weather-forecast">
+<div class="row">
+    <div class="col-2">
+        <div class="weather-forecast-date">
+        Thursday
+        </div>
+        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" alt="" width="42"
+        />
+        <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max">18⁰C</span>  
+                  <span class="weather-forecast-temperature-min">12⁰C</span>
+            </div>
+    </div>
+</div>
+</div>
       <footer>
         This project was coded by
         <a href="https://github.com/OlessyaOG" target="_blank">
           Olessya Oporta</a
         >
         on
-        <a href="https://github.com/OlessyaOG/my-weather-app" target="_blank"
+        <a href="https://github.com/OlessyaOG/SheCodesPlus-Final-Project" target="_blank"
           >GitHub</a
         >
         and hosted on
