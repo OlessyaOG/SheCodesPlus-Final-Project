@@ -69,6 +69,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+// Getting a correct day for the forecast elements
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 // Creating API function for weather forecast
 
 function getForecast(city) {
@@ -80,30 +89,36 @@ function getForecast(city) {
 // Building the forecast function (jss only)
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  let days = ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  console.log(response.data);
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast">
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast">
 <div class="row">
     <divn class="col-2">
         <div class="weather-forecast-date">
-        ${day}
+${formatDay(day.time)}
         </div>
-        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" alt="" width="42"
+        <img src="${day.condition.icon_url}" alt="condition" width="60"
         />
         <div class="weather-forecast-temperatures">
-                  <div class="weather-forecast-temperature-max">18⁰C</div>  
-                  <div class="weather-forecast-temperature-min">12⁰C</div>
+                  <div class="weather-forecast-temperature-max">${Math.round(
+                    day.temperature.maximum
+                  )}⁰C</div>  
+                  <div class="weather-forecast-temperature-min">${Math.round(
+                    day.temperature.minimum
+                  )}⁰C</div>
             </div>
     </div>
 </div>
 </div>`;
+    }
   });
 
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
