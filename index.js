@@ -96,8 +96,7 @@ function displayForecast(response) {
     if (index < 5) {
       forecastHtml =
         forecastHtml +
-        `
-  <div class="weather-forecast-wrapper">
+        `<div class="weather-forecast-wrapper">
         <div class="weather-forecast">
 <div class="row">
     <div class="col-2">
