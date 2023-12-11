@@ -70,7 +70,7 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
-  padding-left: 60px;
+  padding-left: 45px;
 }
 
 .weather-app-temperature {
