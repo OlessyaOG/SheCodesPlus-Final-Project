@@ -1,10 +1,11 @@
 body {
-  background-color: #f9f7fe;
-  font-family: "Agbalumo";
+  font-family: "Gorditas";
+  background-image: url("background.jpg");
+  background-size: 500px;
 }
 
 a {
-  color: #885df1;
+  color: #132743;
 }
 
 .weather-app {
@@ -23,21 +24,23 @@ header {
 
 .search-form-input {
   background-color: #f9f7fe;
-  border: none;
+  border: 2px solid #a75265;
   border-radius: 10px;
   font-size: 16px;
   width: 80%;
   padding: 15px 20px;
+  font-family: "Gorditas";
 }
 
 .seach-form-button {
-  background: peru;
+  background: #a75265;
   border: none;
   border-radius: 10px;
-  color: beige;
+  color: #fcf6e8;
   font-size: 16px;
-  margin-left: 5 px;
-  padding: 15px 30px;
+  margin-left: 5px;
+  padding: 15px 25px;
+  font-family: "Gorditas";
 }
 
 main {
@@ -51,8 +54,8 @@ main {
 
 .weather-app-city {
   margin: 0;
-  color: #272142;
-  font-size: 38px;
+  color: #57385c;
+  font-size: 45px;
   font-weight: 700;
   line-height: 48px;
 }
@@ -66,9 +69,11 @@ main {
 
 .weather-app-temperature-container {
   display: flex;
+  padding-left: 90px;
 }
 
 .weather-app-temperature {
+  color: #57385c;
   font-size: 88px;
   line-height: 88px;
   font-weight: bold;
@@ -76,7 +81,6 @@ main {
 
 .weather-app-icon {
   position: relative;
-  top: 17px;
   width: 88px;
   height: 88px;
   margin-right: 10px;
@@ -84,17 +88,18 @@ main {
 }
 
 .weather-app-unit {
-  margin-top: 16px;
+  position: relative;
+  color: #57385c;
+  margin-top: 10px;
   font-size: 28px;
 }
 .weather-app-details strong {
-  color: #f65282;
+  color: #ec7263;
 }
 
 .weather-forecast {
   display: inline-flex;
-  margin: 20px;
-  color: black;
+  color: #57385c;
   text-align: center;
 }
 
@@ -102,7 +107,25 @@ main {
   font-size: 16px;
 }
 
+.weather-forecast-wrapper {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding-right: 20;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
 .weather-forecast-temperature-min {
+  color: #ec7263;
   opacity: 0.6;
   display: inline-block;
 }
@@ -110,17 +133,16 @@ main {
 .weather-forecast-temperature-max {
   display: inline-block;
   margin-right: 10px;
-}
-
-.weather-forecast-temperatures {
-  font-size: 13px;
+  color: #ec7263;
+  font-weight: bold;
 }
 
 footer {
-  border-top: 2 px solid #f9f7fe;
+  border-top: 2 px solid #36206e;
   padding: 30px 0 0 0;
   text-align: center;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 100;
   color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
 }
